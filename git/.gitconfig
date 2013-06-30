@@ -1,0 +1,16 @@
+[user]
+	name = sitong
+	email = sitong@myeatclub.com
+[core]
+	editor = vim
+[credential]
+	helper = osxkeychain
+[diff]
+    tool = vimdiff
+[merge]
+    tool = vimdiff
+[alias]
+	last = log -1 HEAD
+    undo = reset --hard HEAD~1
+[http]
+	postBuffer = 524288000
