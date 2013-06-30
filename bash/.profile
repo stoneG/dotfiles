@@ -21,6 +21,7 @@ export PATH=/usr/local/bin:$PATH
 
 # Aliases
 alias ls="ls -G"
+alias lsa="ls -a"
 
 # MacPorts Installer addition on 2013-03-04_at_10:32:25: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
