@@ -11,6 +11,10 @@
     tool = vimdiff
 [alias]
 	last = log -1 HEAD
+	last2 = log -2 HEAD
     undo = reset --hard HEAD~1
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [http]
 	postBuffer = 524288000
+[color]
+	ui = true

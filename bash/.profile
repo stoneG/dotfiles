@@ -33,3 +33,15 @@ export PATH=${HOME}/.bin:/opt/local/bin:/opt/local/sbin:$PATH
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
+
+# Java
+export JAVA_HOME=/usr
+#export PATH=$JAVA_HOME/bin:$PATH 
+
+# Amazon Elastic Load Balancer
+export AWS_ELB_HOME=/usr/local/ElasticLoadBalancing-1.0.17.0
+export PATH=$PATH:$AWS_ELB_HOME/bin
+export AWS_CREDENTIAL_FILE=${HOME}/AWS/AWS_credentials
+export AWS_ELB_URL=https://elasticloadbalancing.us-west-1.amazonaws.com
+
+export EATCLUB_LOCAL_SETTINGS=/Users/sitong/local_settings/local_settings.py

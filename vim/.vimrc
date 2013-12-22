@@ -37,6 +37,7 @@ set undofile
 
 " Indentation by file type
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType css setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 
@@ -156,5 +157,7 @@ endfunc
 
 " Indent Guide
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=103
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=16
+let g:indent_guides_start_level = 2
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#242424 ctermbg=NONE
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#404040 ctermbg=236
+
