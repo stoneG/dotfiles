@@ -161,3 +161,6 @@ let g:indent_guides_start_level = 2
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#242424 ctermbg=NONE
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#404040 ctermbg=236
 
+" Folding
+set foldmethod=indent
+set foldlevel=99

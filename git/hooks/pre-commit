@@ -102,7 +102,7 @@ def check_javascript():
 
     rrcode = 0
     for file in modifieds:
-        out, err, retcode = call('gjslint --nojsdoc %s' % file)
+        out, err, retcode = call('gjslint --nojsdoc --max_line_length 83 %s' % file)
         if out or err:
             output('gjslint', out, err)
             rrcode = rrcode | retcode

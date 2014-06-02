@@ -1,3 +1,6 @@
+# RVM
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
 # Prompt
 source ~/.bash/gitprompt.sh
 function parse_git_dirty {
@@ -22,6 +25,7 @@ export PATH=/usr/local/bin:$PATH
 # Aliases
 alias ls="ls -G"
 alias lsa="ls -a"
+alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 # MacPorts Installer addition on 2013-03-04_at_10:32:25: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
@@ -45,3 +49,4 @@ export AWS_CREDENTIAL_FILE=${HOME}/AWS/AWS_credentials
 export AWS_ELB_URL=https://elasticloadbalancing.us-west-1.amazonaws.com
 
 export EATCLUB_LOCAL_SETTINGS=/Users/sitong/local_settings/local_settings.py
+
