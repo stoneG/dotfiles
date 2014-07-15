@@ -64,6 +64,8 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
+nnoremap t gt
+nnoremap T gT
 
 " Get rid of F1
 inoremap <F1> <ESC>
