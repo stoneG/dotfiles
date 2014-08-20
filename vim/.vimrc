@@ -1,13 +1,46 @@
 filetype off
-call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
-
 set nocompatible
-
 set modelines=0
 
+
+" VUNDLE START
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+""" Plugins {
+
+" Git integration
+Plugin 'tpope/vim-fugitive'
+
+" Status bar
+Plugin 'bling/vim-airline'
+Plugin 'paranoida/vim-airlineish'
+let g:airline_theme = 'airlineish'
+
+" Theme
+Plugin 'altercation/vim-colors-solarized'
+" colorscheme sitongpython
+syntax enable
+set background=dark
+colorscheme solarized
+
+""" }
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+
+" VUNDLE END
+
+
 "Standard stuff
-syntax on
 filetype on
 set ai
 set ruler
@@ -40,8 +73,6 @@ autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
-
-colorscheme sitongpython
 
 " Regex and search
 " nnoremap / /\v
