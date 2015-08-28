@@ -14,13 +14,28 @@ Plugin 'gmarik/Vundle.vim'
 
 """ Plugins {
 
+" Editing
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'mileszs/ack.vim'
+Plugin 'rstacruz/sparkup'
+Plugin 'luochen1990/rainbow'
+let g:rainbow_active = 0
+nnoremap <leader>r :RainbowToggle<ENTER>
+Plugin 'kien/ctrlp.vim'
+" Plugin 'Valloric/YouCompleteMe'
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
+
+" Code Structure
+" Plugin 'majutsushi/tagbar'
+" nmap <F6> :TagbarToggle<CR>
+" let g:tagbar_left = 1
+
 " Git integration
 Plugin 'tpope/vim-fugitive'
 
 " Status bar
 Plugin 'bling/vim-airline'
-Plugin 'paranoida/vim-airlineish'
-let g:airline_theme = 'airlineish'
 
 " Theme
 Plugin 'altercation/vim-colors-solarized'
@@ -175,7 +190,7 @@ noremap <leader>j :CommandT<cr>
 noremap <leader>y :CommandTFlush<cr>
 
 " Ack
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+let g:ackprg="ack -H --nocolor --nogroup --column"
 " :Ack [options] {pattern} [{directory}]
 nnoremap <leader>a :Ack
 
@@ -197,3 +212,8 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#404040 ctermbg=236
 " Folding
 set foldmethod=indent
 set foldlevel=99
+
+" Ctrl P file ignoring
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '^static/*+',
+  \ }
