@@ -1,18 +1,24 @@
-filetype off
 filetype plugin indent on
 set nocompatible
+filetype off
 set modelines=0
 
+" Leader
+let mapleader = ","
+let g:mapleader = ","
 
 " VUNDLE START
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call vundle#rc()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
 """ Plugins {
+
+" Syntax Highlighting
+Plugin 'kchmck/vim-coffee-script'
 
 " Editing
 Plugin 'scrooloose/nerdcommenter'
@@ -56,7 +62,7 @@ filetype plugin indent on    " required
 
 
 "Standard stuff
-filetype on
+"filetype on
 set ai
 set ruler
 set backupdir=~/.vim/tmp
@@ -88,6 +94,8 @@ autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
+autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType coffeescript setlocal expandtab shiftwidth=2 softtabstop=2
 
 " Regex and search
 " nnoremap / /\v
@@ -145,16 +153,6 @@ vnoremap $2 <esc>`>a]<esc>`<i[<esc>
 vnoremap $3 <esc>`>a}<esc>`<i{<esc>
 vnoremap $$ <esc>`>a"<esc>`<i"<esc>
 vnoremap $q <esc>`>a'<esc>`<i'<esc>
-vnoremap $e <esc>`>a"<esc>`<i"<esc>
-
-" Map auto complete of (, ", ', [
-inoremap $1 ()<esc>i
-inoremap $2 []<esc>i
-inoremap $3 {}<esc>i
-inoremap $4 {<esc>o}<esc>O
-inoremap $q ''<esc>i
-inoremap $e ""<esc>i
-inoremap $t <><esc>i
 
 "Highlight search
 set hlsearch
@@ -176,32 +174,19 @@ highlight RedundantSpaces ctermbg=white guibg=white
 match RedundantSpaces /\s\+$\| \+\ze\t/
 hi NonText guifg=white guibg=white
 
-" Leader
-let mapleader = ","
-let g:mapleader = ","
-
 " When vimrc is edited, reload it
 autocmd! bufwritepost vimrc source ~/.vim_runtime/vimrc
 
 " Command-T
-let g:CommandTMaxHeight = 15
-set wildignore+=*.o,*.obj,.git,*.pyc
-noremap <leader>j :CommandT<cr>
-noremap <leader>y :CommandTFlush<cr>
+" let g:CommandTMaxHeight = 15
+" set wildignore+=*.o,*.obj,.git,*.pyc
+" noremap <leader>j :CommandT<cr>
+" noremap <leader>y :CommandTFlush<cr>
 
 " Ack
 let g:ackprg="ack -H --nocolor --nogroup --column"
 " :Ack [options] {pattern} [{directory}]
-nnoremap <leader>a :Ack
-
-" Show syntax highlighting groups for word under cursor
-nmap <C-S-P> :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-    if !exists("*synstack")
-        return
-    endif
-    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
+nnoremap <leader>a :Ack 
 
 " Indent Guide
 let g:indent_guides_auto_colors = 0
@@ -215,5 +200,5 @@ set foldlevel=99
 
 " Ctrl P file ignoring
 let g:ctrlp_custom_ignore = {
-  \ 'dir': '^static/*+',
+  \ 'dir': '^log/*+',
   \ }
