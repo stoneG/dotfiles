@@ -1,0 +1,12 @@
+{
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.1.tgz#c1261107aeb2f294ebffec9ed9ecad529a6097ed",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.1.tgz",
+    "hash": "c1261107aeb2f294ebffec9ed9ecad529a6097ed",
+    "registry": "npm"
+  },
+  "registry": "npm",
+  "hash": "c1261107aeb2f294ebffec9ed9ecad529a6097ed"
+}

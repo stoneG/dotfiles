@@ -1,0 +1,12 @@
+{
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/is-arrayish/-/is-arrayish-0.3.1.tgz#c2dfc386abaa0c3e33c48db3fe87059e69065efd",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/is-arrayish/-/is-arrayish-0.3.1.tgz",
+    "hash": "c2dfc386abaa0c3e33c48db3fe87059e69065efd",
+    "registry": "npm"
+  },
+  "registry": "npm",
+  "hash": "c2dfc386abaa0c3e33c48db3fe87059e69065efd"
+}

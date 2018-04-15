@@ -1,0 +1,12 @@
+{
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/hyper-material-box/-/hyper-material-box-1.1.10.tgz#4b6da7ac2639c51eb6e811f2632289623946cab6",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/hyper-material-box/-/hyper-material-box-1.1.10.tgz",
+    "hash": "4b6da7ac2639c51eb6e811f2632289623946cab6",
+    "registry": "npm"
+  },
+  "registry": "npm",
+  "hash": "4b6da7ac2639c51eb6e811f2632289623946cab6"
+}

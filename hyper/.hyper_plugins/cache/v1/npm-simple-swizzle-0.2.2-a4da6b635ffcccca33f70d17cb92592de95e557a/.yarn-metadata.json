@@ -1,0 +1,12 @@
+{
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/simple-swizzle/-/simple-swizzle-0.2.2.tgz#a4da6b635ffcccca33f70d17cb92592de95e557a",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/simple-swizzle/-/simple-swizzle-0.2.2.tgz",
+    "hash": "a4da6b635ffcccca33f70d17cb92592de95e557a",
+    "registry": "npm"
+  },
+  "registry": "npm",
+  "hash": "a4da6b635ffcccca33f70d17cb92592de95e557a"
+}
