@@ -17,7 +17,3 @@ GIT_PS1_HIDE_IF_PWD_IGNORED=true
 setopt PROMPT_SUBST
 precmd () { __git_ps1 "%F{cyan}%B./%c%b%f" "
 ⚡" " (%s)" }
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
