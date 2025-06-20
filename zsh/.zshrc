@@ -9,13 +9,14 @@ fpath=("${0:A:h}/.zsh" $fpath)
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWCOLORHINTS=true
-GIT_PS1_SHOWUPSTREAM=true
-GIT_PS1_SHOWCONFLICTSTATE=true
+GIT_PS1_SHOWUPSTREAM="verbose"
+GIT_PS1_DESCRIBE_STYLE="branch"
+GIT_PS1_SHOWCONFLICTSTATE="yes"
 GIT_PS1_HIDE_IF_PWD_IGNORED=true
 
 setopt PROMPT_SUBST
-precmd () { __git_ps1 "./%c" "
-⚡" " [%s]" }
+precmd () { __git_ps1 "%F{cyan}%B./%c%b%f" "
+⚡" " (%s)" }
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
